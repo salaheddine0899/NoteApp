@@ -43,6 +43,7 @@ android {
 
 dependencies {
     kapt(libs.hilt.compiler)
+    kapt("androidx.room:room-compiler:2.6.1")
 
 
     implementation(libs.androidx.core.ktx)
@@ -55,6 +56,8 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.room.room.runtime2)
+    implementation(libs.room.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -62,4 +65,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    annotationProcessor(libs.androidx.room.room.compiler2)
 }

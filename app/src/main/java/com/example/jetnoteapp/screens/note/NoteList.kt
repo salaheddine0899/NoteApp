@@ -18,7 +18,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.jetnoteapp.utils.formatDate
 
 @Composable
 fun NoteList(viewModel: NoteViewModel= hiltViewModel()) {
@@ -38,7 +37,7 @@ fun NoteList(viewModel: NoteViewModel= hiltViewModel()) {
                     Text(text = it.title, style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold)
                     Text(text = it.details, style = MaterialTheme.typography.bodyMedium)
-                    Text(text = formatDate(it.createdAt), style = MaterialTheme.typography.bodySmall,)
+                    //Text(text = formatDate(it.createdAt), style = MaterialTheme.typography.bodySmall,)
                 }
             }
         }
