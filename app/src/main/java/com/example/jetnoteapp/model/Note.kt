@@ -3,6 +3,7 @@ package com.example.jetnoteapp.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.time.Instant
 import java.util.Date
 import java.util.UUID
 
@@ -13,5 +14,5 @@ data class Note(
     val title:String,
     val details: String,
     @ColumnInfo(name = "created_at")
-    val createdAt: Date
+    val createdAt: Date = Date.from(Instant.now())
 )
